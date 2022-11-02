@@ -1,0 +1,51 @@
+.greeting {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    font-family: 'Fira Code', monospace;
+}
+
+.name {
+    font-size: 65px;
+    color: var(--grey-color-1);
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 65px;
+    color: var(--grey-color-2);
+    margin-bottom: 15px;
+}
+
+.bio {
+    color: var(--text-grey-color);
+}
+
+.banner {
+    height: 100vh;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 5% 20%;
+}
+
+.bannerElementContainer {
+    margin: 10% auto;
+}
+
+.bannerElementContainer p {
+    font-size: 18px;
+    width: 800px;
+    margin: 10px 0px 50px;
+    color: var(--text-grey-color);
+    line-height: 32px;
+    letter-spacing: 1px;
+
+}
+
+.cta {
+    font-size: 16px;
+    padding: 15px 30px;
+}

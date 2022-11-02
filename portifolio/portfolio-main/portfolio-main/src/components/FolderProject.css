@@ -1,0 +1,133 @@
+.folderProjectContainer {
+    height: auto;
+    width: 290px;
+    padding: 28px 28px 10px;
+    /* width: 300px;
+    padding: 30px 30px 10px; */
+    border-radius: 5px;
+    background-color: var(--dim-blue);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.folderProjectContainer:hover {
+    animation-name: folderHover;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.projectBody {
+    height: 170px;
+}
+
+.folderIcon {
+    font-size: 36px;
+    margin-bottom: 15px;
+    /* font-size: 40px;
+    margin-bottom: 25px; */
+}
+
+.projectTitleFolder {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--grey-color-1);
+    /* margin-bottom: 15px; */
+}
+
+.folderProjectDescription {
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.fpts {
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px 15px 12px;
+    visibility: visible !important;
+    
+}
+.fpts li{
+    /* color: var(--grey-color-1s); */
+    opacity: 0.5;
+    padding-bottom: 20px;
+    font-family: var(--secondary-font);
+}
+
+.folderProjectContainer:hover .folderIcon{
+    animation-name: hoverChangeColor;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.folderProjectContainer:hover .projectTitleFolder{
+    animation-name: hoverChangeColor;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.folderProjectContainer:hover .folderProjectDescription{
+    animation-name: hoverChangeColorGrey1;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.folderProjectContainer:hover .fpts li{
+    animation-name: showTechStack;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.folderProjectContainer:hover .fpts {
+    animation-name: changeBG;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes folderHover {
+    0% {
+        margin-top: 0px;
+        background-color: var(--dim-blue);
+    }
+    100% {
+        margin-top: -10px;
+        /* background-color: var(--tinted-green-color); */
+        box-shadow: 3px 3px 2px 2px var(--text-green-color);
+    }    
+}
+
+@keyframes hoverChangeColor {
+    to {
+        margin-top: -5px;
+        color: var(--text-green-color);
+    }
+}
+
+@keyframes hoverChangeColorGrey1 {
+    to {
+        color: var(--grey-color-1);
+    }
+}
+
+@keyframes hoverChangeColorGrey3 {
+    to {
+        opacity: 1;
+        color: var(--grey-color-3);
+    }
+}
+@keyframes showTechStack {
+    to {
+        opacity: 1;
+    }   
+}
+@keyframes changeBG {
+    to {
+        margin-left: -5px;
+        padding: 10px 15px 12px;
+        background-color: var(--main-bg-color);
+    }    
+}
+

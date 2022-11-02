@@ -1,0 +1,187 @@
+.eachProject {
+    padding-bottom: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--grey-color-3);
+    margin-top: 40px;
+    /* margin-bottom: 50px; */
+    margin-left: 50px;
+}
+
+.projectDetail {
+    margin: auto auto;
+    z-index: 9999;
+}
+
+.projectImage {
+    width: 590px;
+    height: 390px;
+    /* width: 600px;
+    height: 400px; */
+    object-fit: cover;
+    border-radius: 5px;
+    filter: grayscale(100%);
+
+}
+
+.projectImage:hover {
+    animation-name: removeGreyScale;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes removeGreyScale {
+    to {
+        filter: grayscale(0%);
+    }
+}
+
+.projectTitle { 
+    margin-top: 5px;
+}
+
+.projectDescription {
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: var(--dim-blue);
+    line-height: 25px;
+    box-shadow: 2px 2px 1px 1px var(--dim-blue);
+}
+
+.eachProject:hover .projectTechStack{
+    animation-name: changeBGTS;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.eachProject:hover .githubAndOtherLInk {
+    visibility: visible;
+}
+
+@keyframes changeBGTS {
+    to {
+        visibility: visible;
+        border-radius: 10px;
+        padding: 10px 20px 16px;
+        background-color: var(--dim-main-bg-color);
+    }    
+}
+
+.eachProject:hover .projectImage{
+    animation-name: removeGreyScale;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    box-shadow: 10px 10px 15px 3px rgba(0, 0, 0, 0.366);
+}
+
+@keyframes removeGreyScale {
+    to {
+        border-radius: 10px;
+        filter: grayscale(0%);
+    }
+}
+
+.eachProject:hover .projectTitle {
+    animation-name: changeColor;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes changeColor {
+    to {
+        color: var(--text-green-color);
+    }    
+}
+
+.eachProject:hover .projectDescription {    
+    animation-name: boxShadow;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes boxShadow {
+    to {
+        box-shadow: 2px 2px 1px 1px var(--text-green-color);
+    }
+}
+
+.eachProject:hover .projectDescription p, h1, li{
+    animation-name: changeColor2;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes changeColor2 {
+    to {
+        color: var(--grey-color-1);
+    }    
+}
+
+.projectDescription p, h1, li{
+    color: var(--grey-color-3);
+}
+
+.projectTechStack {
+    /* opacity: 0.0; */
+    visibility: hidden;
+}
+
+.githubAndOtherLInk {
+    visibility: hidden;
+}
+
+.projectTechStack li{
+    display: inline;
+}
+.eachProject:hover .projectTechStack li{
+    animation-name: showTechStack;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;    
+}
+@keyframes showTechStack {
+    to {
+        opacity: 1;
+    }    
+}
+
+.projectTechStack {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.projectTechStack li {
+    list-style: none;
+    display: inline;
+    margin-right: 15px;
+    font-size: 13px;
+    opacity: 0.5;
+    font-family: var(--secondary-font);
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.imageOverlap {
+    position: relative;
+    left: -100px;
+}
+
+.projectLink {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.projectLink:hover {
+    color: var(--text-green-color);
+}
